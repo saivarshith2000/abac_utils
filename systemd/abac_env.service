@@ -1,0 +1,16 @@
+# ABAC environmental attribute service Systemd unit file
+# Copyright (C) 2021 Hariyala Omakara Naga Sai Varshith
+
+# ABAC Environment attribute updater service. 
+# It needs the 'abac' cli tool to be installed. This file should be located in /etc/systemd/system/
+
+[Unit]
+Description=Environment attribute updater script
+
+[Service]
+Environment=PYTHONUNBUFFERED=1
+ExecStart=abac env-update
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

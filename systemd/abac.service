@@ -1,0 +1,16 @@
+# ABAC service Systemd unit file
+# Copyright (C) 2021 Hariyala Omakara Naga Sai Varshith
+
+# ABAC server systemd service file. This is a "system" service that starts the abac server.
+# It needs the 'abac' cli tool to be installed. This file should be located in /etc/systemd/system/
+
+[Unit]
+Description=Object attribute server for the ABAC security module
+
+[Service]
+Environment=PYTHONUNBUFFERED=1
+ExecStart=abac server
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
