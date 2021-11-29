@@ -1,7 +1,6 @@
 # Entrypoint for the ABAC command line tool
 # Copyright (C) 2021 Hariyala Omakara Naga Sai Varshith
 
-#!/usr/bin/python3
 """
 Entrypoint for the abac userspace command line tool
 """
